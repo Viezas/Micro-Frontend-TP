@@ -1,18 +1,4 @@
-import React from 'react';
-import Header from '../../sharedComponent/src/Header';
+import BaseLayout from '../../sharedComponent/src/layout/Base';
 
-const App = () => (
-  <div>
-    <Header>
-      <div class="flex items-center justify-between gap-2">
-        <button class="rounded border px-4 py-1 hover:bg-sky-500">Sign in</button>
-        <span>/</span>
-        <button class="rounded border px-4 py-1 hover:bg-sky-500">Sign up</button>
-      </div>
-    </Header>
-    <h1>Basic Host-Remote</h1>
-    <h2>HOST</h2>
-  </div>
-);
-
+const App = () => <BaseLayout client={'Host'}> Je suis dans un layout moi aussi </BaseLayout>;
 export default App;
