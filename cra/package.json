@@ -10,12 +10,21 @@
   "scripts": {
     "start": "pnpm --filter cra_* start",
     "build": "pnpm --filter cra_* build",
+    "test": "vitest",
     "e2e:ci": "pnpm start & npx cypress run --config-file ../cypress-e2e/config/cypress.config.ts --config '{\"supportFile\": \"../cypress-e2e/support/e2e.ts\"}' --spec \"./e2e/*.cy.ts\" --browser=chrome && lsof -ti tcp:3000,3001,3002 | xargs kill"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "@testing-library/react": "^14.2.1",
     "concurrently": "7.6.0",
     "cypress": "13.6.2",
     "forever": "4.0.3",
+    "jsdom": "^24.0.0",
+    "vitest": "^1.2.2",
     "wait-on": "^7.1.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.12"
   }
 }
